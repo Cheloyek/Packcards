@@ -70,6 +70,7 @@ export const GroupButtons = () => {
       onClick={allPacksButtonHandler}
       // classes={{root: activeFilterPacks === "all" ? s.active : s.notActive}}
       className={s.all}
+
       // className={s.NotActive}
       // sx={{
       //   border: "1px solid #D9D9D9",
