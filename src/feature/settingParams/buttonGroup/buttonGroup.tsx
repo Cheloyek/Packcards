@@ -19,10 +19,10 @@ export const GroupButtons = () => {
   const URLid = searchParams.get("user_id");
   const URLParams = Object.fromEntries(searchParams);
 
-  // const colorActiveMyButton = URLid ? "#FFFFFF" : "#000000";
-  // const colorActiveAllButton = !URLid ? "#FFFFFF" : "#000000";
-  // const bgColorMyButton = URLid ? "#366EFF;" : "#FFFFFF";
-  // const bgColorAllButton = !URLid ? "#366EFF;" : "#FFFFFF";
+  const colorActiveMyButton = URLid ? "#FFFFFF" : "#000000";
+  const colorActiveAllButton = !URLid ? "#FFFFFF" : "#000000";
+  const bgColorMyButton = URLid ? "#366EFF;" : "#FFFFFF";
+  const bgColorAllButton = !URLid ? "#366EFF;" : "#FFFFFF";
 
     // const colorActiveMyButton = activeFilterPacks === "my" ? "#FFFFFF" : "#000000";
     // const colorActiveAllButton = activeFilterPacks === "all" ? "#FFFFFF" : "#000000";
@@ -51,17 +51,16 @@ export const GroupButtons = () => {
     <Button
       onClick={myPacksButtonHandler}
       // classes={activeFilterPacks === "my" ? s.Active : s.NotActive}
-      classes={{root: activeFilterPacks === "my" ? s.active : s.notActive}}
+      // classes={{root: activeFilterPacks === "my" ? s.active : s.notActive}}
       // className={s.Active}
-      // sx={{
-      // sx={{
-      //   border: "1px solid #D9D9D9",
-      //   // color: colorActiveMyButton,
-      //   // backgroundColor: bgColorMyButton,
-      //   // ":hover": {
-      //   //   backgroundColor: bgColorMyButton,
-      //   // },
-      // }}
+      sx={{
+        border: "1px solid #D9D9D9",
+        color: colorActiveMyButton,
+        backgroundColor: bgColorMyButton,
+        ":hover": {
+          backgroundColor: bgColorMyButton,
+        },
+      }}
       key="my"
     >
       My
@@ -69,17 +68,17 @@ export const GroupButtons = () => {
     <Button
       onClick={allPacksButtonHandler}
       // classes={{root: activeFilterPacks === "all" ? s.active : s.notActive}}
-      className={s.all}
+      // className={s.all}
 
       // className={s.NotActive}
-      // sx={{
-      //   border: "1px solid #D9D9D9",
-      //   // color: colorActiveAllButton,
-      //   // backgroundColor: bgColorAllButton,
-      //   // ":hover": {
-      //   //   backgroundColor: bgColorAllButton,
-      //   // },
-      // }}
+      sx={{
+        border: "1px solid #D9D9D9",
+        color: colorActiveAllButton,
+        backgroundColor: bgColorAllButton,
+        ":hover": {
+          backgroundColor: bgColorAllButton,
+        },
+      }}
       key="all"
     >
       All
