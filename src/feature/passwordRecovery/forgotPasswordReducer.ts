@@ -31,10 +31,12 @@ export const recoveryPasswordTC = (email: string) => async (dispatch: AppThunkDi
   const payload = {
     email: email,
     from: `test-front-admin <ai73a@yandex.by>`,
-    message: `<div style="background-color: lime; padding: 15px"> 
-                password recovery link: <a href=http://localhost:3000${PATH.SET_NEW_PASSWORD}token>link</a>
+    message: `<div style="background-color: lime; padding: 15px">
+                password recovery linksdsds: <a href=http://localhost:3000${PATH.SET_NEW_PASSWORD}token>link</a>
                 </div>`,
   };
+
+
   try {
     await appAPI.recoveryPassword(payload);
   } catch (e) {
